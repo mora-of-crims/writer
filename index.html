@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мора оф Кримс</title>
+    <style>
+        @media (orientation: landscape) {
+        
+            html, body {
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: #804040;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        
+        header {
+            background-color: #4D0000;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 10px ridge white;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        nav {
+            text-align: center;
+            margin: 20px 0;
+            padding-bottom: 20px;
+            border-bottom: 10px groove white;
+        }
+        
+        nav a {
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            color: red;
+            font-size: 1.1em;
+        }
+
+        main {
+            padding: 10px;
+        }
+
+        footer {
+            background-color: #4D0000;
+            text-align: center;
+            padding: 10px;
+            border-top: 10px groove white;
+            width: 100%;
+            bottom: 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        img {
+            border: 10px groove white; 
+            display: block; 
+            margin: 20px auto;
+            width: 70%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.15);
+        }
+
+        .info {
+            display: flex; 
+            align-items: center;
+        }
+
+        .bio {
+            flex: 1;
+        }
+
+        .pic {
+            flex: 1;
+            text-align: right;
+        }
+
+        .mora {
+            font-size: 2.2em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .more {
+            font-size: 1.4em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            text-decoration: overline black;
+            margin-bottom: 50px;
+            font-weight: bold;
+        }
+
+        .information {
+            text-align: center;
+            font-size: 0.95em;
+            margin-top: 100px;
+        }
+
+        .alone {
+            color: red;
+            font-size: 2.5em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .book-card {
+            display: flex;
+            align-items: center;
+            background-color: #4D0000;
+            border: 10px groove white;
+            padding: 20px;
+            margin: 20px 0;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .book-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            
+        }
+
+        .book-card img {
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+            border: 5px groove white;
+        }
+
+        .book-info h3 {
+            margin: 0;
+            font-size: 1.5em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .book-info p {
+            font-size: 1em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .horrors {
+            font-size: 2.5em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        .here {
+            font-size: 2.5em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            margin: 0;
+            color: red;
+            margin-bottom: 1.7em;
+        }
+
+        .meow {
+            margin-top: 2em;
+            margin-bottom: 2em;
+            font-size: 1.1em;
+        }
+
+        .need {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 1.6em;
+            color: #4D0000;
+        }
+
+        .needy {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 1.6em;
+            color: #4D0000;
+            margin-top: 2.5em;
+        }
+
+        .targety {
+            font-size: 1.6em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: white;
+            text-decoration: overline red;
+        }
+
+        .targety:hover {
+            color: red;
+        }
+
+        .tire {
+            color: red;
+            display: block;
+            font-size: large;
+        }
+
+        .purchase-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #4D0000;
+            color: white;
+            text-decoration: none;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 1.6em;
+            border: 2px solid white;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .purchase-button:hover {
+            background-color: red;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .open {
+            font-size: 2.5em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            margin-bottom: 1.7em;
+        }
+
+        .linky {
+            font-size: 2em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-decoration: none;
+            color: white;
+            display: block;
+            margin: 10px 0;
+            text-align: center;
+            margin: 40px;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #804040;
+            border: 2px solid white;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .linky:hover {
+            transform: scale(1.05);
+            background-color: red;
+            color: white;
+        }
+        }
+
+        .piccy {
+            display: none;
+        }
+
+        @media (orientation: portrait) {
+        
+            html, body {
+            overflow-x: hidden;
+            }
+
+            .pic {
+                display: none;
+            }
+
+            body {
+                background-color: #804040;
+                color: white;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                margin: 0;
+                padding: 0;
+                position: relative;
+            }
+
+            header {
+                background-color: #4D0000;
+                padding: 10px;
+                text-align: center;
+                border-bottom: 5px ridge white;
+            }
+
+            header h1 {
+                margin: 0;
+                font-size: 2.5em;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            nav {
+                text-align: center;
+                margin: 10px 0;
+                padding-bottom: 10px;
+                border-bottom: 5px groove white;
+            }
+
+            nav a {
+                color: white;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                text-decoration: none;
+                margin: 0 10px;
+                font-size: 1em;
+            }
+
+            nav a:hover {
+                color: red;
+                font-size: 1.1em;
+            }
+
+            main {
+                padding: 5px;
+            }
+
+            footer {
+                background-color: #4D0000;
+                text-align: center;
+                padding: 5px;
+                border-top: 5px groove white;
+                width: 100%;
+                bottom: 0;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            img {
+                border: 5px groove white;
+                display: block;
+                margin: 10px auto;
+                width: 90%;
+                transition: transform 0.3s ease-in-out;
+                }
+
+            img:hover {
+                transform: scale(1.15);
+            }
+
+            .info {
+                display: block;
+                text-align: center;
+            }
+
+            .bio, .piccy {
+                flex: none;
+                text-align: center;
+            }
+
+            .mora {
+                font-size: 1.7em;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                text-align: center;
+                font-weight: bold;
+                margin-top: 1.3em;
+            }
+
+            .more {
+                font-size: 1em;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                text-align: center;
+                text-decoration: none;
+                margin-bottom: 30px;
+                font-weight: bold;
+                margin-bottom: 3em;
+            }
+
+            .information {
+                text-align: center;
+                font-size: 0.75em;
+                margin-top: 50px;
+            }
+
+            .alone {
+                color: red;
+                font-size: 2em;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            .book-card {
+                display: block;
+                background-color: #4D0000;
+                border: 5px groove white;
+                padding: 10px;
+                margin: 10px 0;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .book-card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+
+            .book-card img {
+                width: 100px;
+                height: auto;
+                margin: 0 auto 10px;
+                border: 5px groove white;
+            }
+
+            .book-info h3 {
+                margin: 0;
+                font-size: 1.2em;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            .book-info p {
+                font-size: 0.9em;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            .horrors, .here {
+                font-size: 2em;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                text-align: center;
+                margin: 0;
+            }
+
+            .here {
+                color: red;
+                margin-bottom: 1em;
+            }
+
+            .meow {
+                margin-top: 1em;
+                margin-bottom: 1em;
+                font-size: 1em;
+            }
+
+            .need, .needy {
+                text-align: center;
+                font-size: 1.5em;
+                margin-bottom: 1em;
+                color: #4D0000;
+            }
+
+            .need {
+                margin-top: 2em;
+            }
+
+            .needy {
+                margin-top: 2em;
+            }
+
+            .targety {
+                font-size: 1.4em;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: white;
+                text-decoration: overline red;
+            }
+
+            .targety:hover {
+                color: red;
+            }
+
+            .tire {
+                color: red;
+                display: block;
+                font-size: medium;
+            }
+
+            .purchase-button {
+                display: inline-block;
+                padding: 5px 10px;
+                margin-top: 5px;
+                background-color: #4D0000;
+                color: white;
+                text-decoration: none;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 1.2em;
+                border: 2px solid white;
+                transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+            }
+
+            .purchase-button:hover {
+                background-color: red;
+                color: white;
+                transform: scale(1.05);
+            }
+
+            .open {
+                font-size: 2em;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                text-align: center;
+                margin-bottom: 1.5em;
+                margin-top: 0.9em;
+            }
+
+            .linky {
+                font-size: 1.5em;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                text-decoration: none;
+                color: white;
+                display: block;
+                margin: 10px 0;
+                text-align: center;
+                margin: 20px;
+                padding: 5px 10px;
+                margin-top: 5px;
+                background-color: #804040;
+                border: 2px solid white;
+                transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+            }
+
+            .linky:hover {
+                transform: scale(1.05);
+                background-color: red;
+                color: white;
+            }
+
+            .piccy {
+                display: block;
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Мора оф Кримс</h1>
+    </header>
+    <nav>
+        <a href="#about">ОБО МНЕ</a>
+        <a href="#works">КНИГИ</a>
+        <a href="#contact">КОНТАКТЫ</a>
+    </nav>
+    <main>
+        <section id="about">
+            <div class="info">
+                <div class="bio">
+                    <p class="mora">Восходящая звезда в мире литературы.</p>
+                    <p class="more">Драматург, писательница книг в жанре ужасов, триллера.</p>
+                    <div class = "piccy">
+                        <img src="C:\Users\Марианна\OneDrive\Рабочий стол\Сайт Мора оф Кримс\img\D4PJ00Vm-Pg (6).jpg" alt="My Picture">
+                    </div>  
+                    <div class="information">
+                        <p class="wow">Я всегда знала, что моё призвание — рассказывать миру истории.</p>
+                        <p>Такие истории, чтобы вам, послушав их, захотелось вдруг пойти и проверить — точно ли закрыта входная дверь, и точно ли это ваш любимый котик на кухне что-то со стола уронил, а не незваный гость.</p>
+                        <br />
+                        <p>Ах, прошу прощения...</p>
+                        <br />
+                        <p>У вас же нет никакого котика.</p>
+                        <br />
+                        <p>И пёсика тоже нет.</p>
+                        <br />
+                        <p>И дома вы совершенно одни.</p>
+                        <br />
+                        <p>А точно ли</p>
+                        <p class="alone">одни?</p>
+                    </div> 
+                </div> 
+                <div class = "pic">
+                    <img src="C:\Users\Марианна\OneDrive\Рабочий стол\Сайт Мора оф Кримс\img\D4PJ00Vm-Pg (6).jpg" alt="My Picture">
+                </div>   
+            </div>    
+        </section>
+        <div class="need">
+            <p>***</p>
+        </div>
+        <section id="works">
+            <div class="meow">
+            <p class="horrors">Ужасы начинаются</p>
+            <p class="here">здесь.</p>
+            </div>
+            <div class="book-card">
+                <a href="https://www.litres.ru/book/mora-of-krims/merian-nachalo-69253798/" target="_blank">
+                <img src="C:\Users\Марианна\OneDrive\Рабочий стол\Сайт Мора оф Кримс\img\69253798.jpg" alt="Обложка книги">
+                </a>
+                <div class="book-info">
+                    <h3>Мэриан: Начало</h3>
+                    <p>Есть много способов стать в тринадцать лет изгоем общества и нелюбимым ребёнком в семье. Можно, например, отчаянно прогуливать уроки, стать самой унижаемой ученицей в классе, завалить очередные экзамены, а можно убить человека. Так и сделала, вернее, пришлось сделать тринадцатилетней школьнице Мэриан О'Коннор, когда в их машину, набитую покупками и рождественскими подарками, стал ломиться грабитель. Неосторожное превышение самообороны, и ты уже испачкан чужой кровью. А дальше — ещё хуже. Вместо поддержки — осуждение, вместо сочувствия — презрение. Жизнь словно рождественский стеклянный шарик разбилась и её не собрать. Как заставить родных полюбить тебя снова? Как вернуть свою первую любовь, которая от тебя отвернулась? Как понять, кто ты на самом деле? И как смыть с себя эту чужую кровь, которая на руках, на твоём лице и в твоих снах?</p>
+                    <a href="https://www.litres.ru/book/mora-of-krims/merian-nachalo-69253798/" target="_blank" class="purchase-button">Прочитать в электронном варианте</a>
+                    <p class="tire">────</p>
+                    <a href="https://global.wildberries.ru/product/merian-nachalo-163094959?option=271623402" target="_blank" class="purchase-button">Заказать бумажную книгу</a>
+                </div>
+            </div>
+            <div class="book-card">
+                <a href="https://www.litres.ru/book/mora-of-krims/idealnoe-alibi-69488026/" targer="_blank">
+                <img src="C:\Users\Марианна\OneDrive\Рабочий стол\Сайт Мора оф Кримс\img\70738321.jpg" alt="Обложка книги">
+                </a>
+                <div class="book-info">
+                    <h3>Идеальное алиби</h3>
+                    <p>Виктор Элфорд, порядочный небогатый юноша, только что окончивший университет, обвиняется в череде кровавых, зверских преступлений, которые он не совершал. Однако есть и свидетели, которые видели его на местах убийств, и едва ли не ловили Виктора за руку, и люди, подтверждающие его безупречное алиби. Агент полиции, расследующий дело Виктора, поставлен в тупик, но закон и общественность требуют найти виновного. Сможет ли Виктор доказать свою непричастность и очистить своё доброе имя, или же ему придётся понести наказание за неизвестного преступника? Чего добивается убийца, что за опасную игру он затеял с Виктором, и к чему это приведёт? На эти и другие вопросы предстоит ответить агенту полиции, но оправдает ли цель средства?</p>
+                    <a href="https://www.litres.ru/book/mora-of-krims/idealnoe-alibi-69488026/" target="_blank" class="purchase-button">Прочитать в электронном варианте</a>
+                    <p class="tire">────</p>
+                    <a href="https://global.wildberries.ru/product/idealnoe-alibi-185280092?option=304715255" target="_blank" class="purchase-button">Заказать бумажную книгу</a>
+                </div>
+            </div>            
+            <div class="book-card">
+                <a href="https://www.litres.ru/book/mora-of-krims/svet-nadezhdy-69792604/" target="_blank">
+                <img src="C:\Users\Марианна\OneDrive\Рабочий стол\Сайт Мора оф Кримс\img\69792604.jpg" alt="Обложка книги">
+                </a>
+                <div class="book-info">
+                    <h3>Свет надежды</h3>
+                    <p>Как жить дальше, когда в дальнейшем существовании больше нет смысла? Невозможно забыть об этом и просто двигаться дальше, как и суицид — не выход. А на что готов ты ради достижения цели?</p>                    
+                    <a href="https://www.litres.ru/book/mora-of-krims/svet-nadezhdy-69792604/" target="_blank" class="purchase-button">Прочитать в электронном варианте</a>
+                    <p class="tire">────</p>
+                    <a href="https://global.wildberries.ru/product/svet-nadezhdy-180797754?option=298732384" target="_blank" class="purchase-button">Заказать бумажную книгу</a>
+                </div>
+            </div>        
+        </section>
+        <div class="needy">
+            <p>***</p>
+        </div>
+        <section id="contact">
+            <p class="open">Открыта для коллабораций и признательна обратной связи.</p>
+            <div class="contact-info">
+                <a class="linky" href="mailto:moraofcrims@gmail.com?">Электронная почта</a>
+                    <div class="social-icons">
+                        <a class="linky" href="https://wa.me/77772118701?text=" target="_blank">WhatsApp
+                        </a>
+                        <a class="linky" href="https://t.me/mora_of_crims" target="_blank">Telegram
+                        </a>
+                        <a class="linky" href="https://www.instagram.com/mora_of_crims/" target="_blank">Instagram
+                        </a>
+                    </div>    
+            </div>
+           
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Мора оф Кримс. Все права защищены.</p>
+    </footer>
+</body>
+</html>
